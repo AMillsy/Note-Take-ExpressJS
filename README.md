@@ -42,8 +42,8 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 
 ## What I have learnt
 
-It was a very interesting week, we went through learning ExpressJS which allows us to make API's so that we could store data into a database.
-It was difficult week to get your head around the idea of how ExpressJS worked at the start, but as soon as your learn the general idea with making API's, then it becomes easy to make multiple requests. I believed the hardest part of this week was how to layout your code to make it more readable and getting all the modules that you have exported to work together. On the otherhand, once you had structured out all the files, it become easy to read and understand what the code was doing and also where to find the error that were occuring as most of the scripts were around maximum 100 lines.
+It was a very interesting week, we went through learning ExpressJS which allows us to make APIs so that we could store data in a database.
+It was a difficult week to get your head around the idea of how ExpressJS worked at the start, but as soon as you learn the general idea of making APIs, then it becomes easy to make multiple requests. I believed the hardest part of this week was how to layout your code to make it more readable and getting all the modules that you have exported to work together. On the other hand, once you had structured out all the files, it become easy to read and understand what the code was doing and also where to find the errors that were occurring as most of the scripts were around maximum of 100 lines.
 
 ## Installation
 
@@ -53,7 +53,7 @@ Clone the project and then in the terminal run:
 npm i;
 ```
 
-Also available [here](https://make-that-note-c0a85980bbdb.herokuapp.com/)
+Also available on a website [here](https://make-that-note-c0a85980bbdb.herokuapp.com/)
 
 ## Usage
 

@@ -1,7 +1,12 @@
 [
     {
-        "title": "I love sausages",
-        "text": "Something about sausages",
-        "id": 1687350468715
+        "title": "Write some HTML",
+        "text": "Making an amazing website with the use of HTML",
+        "id": 1687377114408
+    },
+    {
+        "title": "Hi, this is the note title",
+        "text": "This is note text field",
+        "id": 1687377123691
     }
 ]
