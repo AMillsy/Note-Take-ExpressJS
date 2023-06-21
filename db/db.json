@@ -1,18 +1,17 @@
 [
     {
         "title": "Test Title",
-        "text": "Test text"
+        "text": "Test text",
+        "id": 0
     },
     {
         "title": "The boy who lived",
-        "text": "The boy lived happily"
+        "text": "The boy lived happily",
+        "id": 1
     },
     {
         "title": "abc",
-        "text": "cba"
-    },
-    {
-        "title": "abc",
-        "text": "cba"
+        "text": "cba",
+        "id": 3
     }
 ]

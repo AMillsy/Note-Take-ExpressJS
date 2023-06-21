@@ -24,3 +24,14 @@ note.post("/", (req, res) => {
     body: { title, text },
   });
 });
+
+note.delete("/:note_id", (req, res) => {
+  const id = req.params.note_id;
+  console.log(id);
+  const response = util.deleteDataFromFile(id, "./db/db.json");
+  if (response) {
+    return res.json({ status: "Failed", reason: response });
+  }
+
+  res.json({ status: "Success", body: id });
+});

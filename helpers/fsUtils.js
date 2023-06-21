@@ -10,20 +10,22 @@ class fsUtils {
   writeToFile(content, fileLocation) {
     this.readFromFile(fileLocation).then((response) => {
       const data = JSON.parse(response);
+      content.id = data.length;
       data.push(content);
       this.#writeDatatoFile(data, fileLocation);
     });
   }
 
   deleteDataFromFile(id, fileLocation) {
-    if (!id) return console.log("MUST HAVE ID TO DELETE");
-    const data = [];
+    if (id === (null || undefined))
+      return console.log("MUST HAVE ID TO DELETE");
+
     this.readFromFile(fileLocation).then((response) => {
-      data.push(JSON.parse(response));
+      const data = JSON.parse(response);
 
       const returnData = data.filter((note) => note.id != id);
       console.log(returnData);
-
+      
       this.#writeDatatoFile(returnData, fileLocation);
     });
   }
