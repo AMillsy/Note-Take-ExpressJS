@@ -8,27 +8,20 @@ class fsUtils {
   readFromFile = util.promisify(fs.readFile);
 
   writeToFile(content, fileLocation) {
-    const data = [];
     this.readFromFile(fileLocation).then((response) => {
-      data.push(JSON.parse(response));
+      const data = JSON.parse(response);
       data.push(content);
       this.#writeDatatoFile(data, fileLocation);
     });
   }
 
   deleteDataFromFile(id, fileLocation) {
-    if(!id) return console.log("MUST HAVE ID TO DELETE");
+    if (!id) return console.log("MUST HAVE ID TO DELETE");
     const data = [];
     this.readFromFile(fileLocation).then((response) => {
       data.push(JSON.parse(response));
 
-      const returnData = data.map((note) => {
-        if (note.id === id) {
-          return;
-        } else {
-          return note;
-        }
-      });
+      const returnData = data.filter((note) => note.id != id);
       console.log(returnData);
 
       this.#writeDatatoFile(returnData, fileLocation);
