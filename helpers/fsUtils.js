@@ -17,26 +17,27 @@ class fsUtils {
   }
 
   deleteDataFromFile(id, fileLocation) {
+    if(!id) return console.log("MUST HAVE ID TO DELETE");
     const data = [];
     this.readFromFile(fileLocation).then((response) => {
       data.push(JSON.parse(response));
-      
-      const returnData = data.map(note =>{
-        if(note.id === id){
+
+      const returnData = data.map((note) => {
+        if (note.id === id) {
+          return;
+        } else {
           return note;
         }
-        else{
-          
-        };
       });
+      console.log(returnData);
+
+      this.#writeDatatoFile(returnData, fileLocation);
     });
   }
 
   #writeDatatoFile(data, fileLocation) {
     fs.writeFile(fileLocation, JSON.stringify(data, null, 4), (err) => {
-      return err
-        ? console.error(err)
-        : console.log("Successfully added data", data);
+      return err ? console.error(err) : console.log("Success", data);
     });
   }
 }
